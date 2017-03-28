@@ -1,2 +1,20 @@
 <h1>Hello RC!</h1>
 <p>I'm in a template :)</p>
+
+<h3>Total users: {{ users|length }}</h3>
+<h3>Matched users: {{ matched_users|length }}</h3>
+<h3>Unmatched users: {{ unmatched_users|length }}</h3>
+
+<h2>Unmatched users</h2>
+<ul>
+{% for user in unmatched_users %}
+    <li><p>{{ user.name}}</p></li>
+{% endfor %}
+</ul>
+
+<h2>Matched users</h2>
+<ul>
+{% for pair in matched_users %}
+    <li><p>{{ pair[0].name}} -- {{ pair[1].name }}</p></li>
+{% endfor %}
+</ul>
