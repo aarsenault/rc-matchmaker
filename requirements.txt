@@ -1,10 +1,10 @@
-<!-- Flask -->
+# Flask
 Flask==0.12
 Jinja2==2.9.5
 
-<!-- SQLAlchemy -->
+# SQLAlchemy
 Flask-SQLAlchemy==2.2
 SQLAlchemy==1.1.7
 
-<!-- Heroku -->
+# Heroku
 gunicorn==19.7.1
