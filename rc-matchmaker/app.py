@@ -1,12 +1,12 @@
 # user endpoint
 # database
 
-from flask import Flask, render_template
+from flask import render_template
 
 import matching
+from config import app
 from users import fetch_users
 
-app = Flask(__name__)
 
 @app.route('/')
 def index():

@@ -5,7 +5,7 @@ A simple tool to pair RCers IRL.
 [x] Set up Flask scaffolding
 [x] Algorithm
 [ ] Set up database: no repeat matches
-[ -] Set up hosting
+[ ] Set up hosting
     [ ] Push to the interwebs
     [ ] Set up RC domain
 
