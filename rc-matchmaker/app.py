@@ -29,7 +29,8 @@ def index():
 
 @app.route('/coffee')
 def coffee():
-    return "Welcome to the Coffee Matchmaker!"
+    return render_template('profile.html')
+    # return "Welcome to the Coffee Matchmaker!"
 
 if __name__=='__main__':
     app.run(debug=True)

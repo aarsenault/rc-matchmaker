@@ -2,15 +2,23 @@
 A simple tool to pair RCers IRL.
 
 # TODOs
-[ ] Set up Flask scaffolding
-[ ] Algorithm
+[x] Set up Flask scaffolding
+[x] Algorithm
 [ ] Set up database: no repeat matches
-[ ] Front-end user interface: opt-in/out, list history
-[ ] User authentication with RC - currently active only
-
-[ ] Set up hosting
+[ -] Set up hosting
     [ ] Push to the interwebs
     [ ] Set up RC domain
+
+
+[- ] User authentication with RC - currently active only
+
+[ ] Front-end user interface: opt-in/out, list history
+    [ -] Review RC user auth API. Where to put opt-in: settings or web page, etc
+    [ ] Goal: create static page for presentation
+
+
+
+
 [ ] Zulip bot:
     [ ] Create bot
     [ ] Notify users
