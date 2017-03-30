@@ -1,1 +1,1 @@
-web: gunicorn app:rc-matchmaker/app
+web: gunicorn --pythonpath rc-matchmaker app:app
