@@ -4,6 +4,7 @@ A simple tool to pair RCers IRL.
 # TODOs
 [x] Set up Flask scaffolding
 [x] Algorithm
+NEXT: Flask by example part 1 - Local Settings. autoenv is not loading our APP_STTINGS variable locally.
 [ ] Set up database: no repeat matches
 [ ] Set up hosting
     [ ] Push to the interwebs
