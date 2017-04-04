@@ -16,6 +16,11 @@ db = SQLAlchemy(app)
 
 from models import User
 
+'''
+very minor comment just to verify I can push to github and heroku :) 
+
+'''
+
 
 @app.route('/')
 def index():
