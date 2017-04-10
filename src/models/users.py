@@ -1,4 +1,4 @@
-from test_data import users as user_data
+from src.common.test_data import users as user_data
 
 def _get_hardcoded_users():
     """Return a hardcoded list of users for testing purposes."""

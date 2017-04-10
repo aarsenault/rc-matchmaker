@@ -2,7 +2,6 @@
 
 # Randomly group people into "buckets" of 2, plus maybe 1 unmatched person
 # If we want to prevent duplicates in the future:
-    # - 
 
 
 

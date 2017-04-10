@@ -6,20 +6,17 @@ import os
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
-import matching
-from users import fetch_users
+# import matching
+# from users import fetch_users
+# from models import User
+from src.models import matching
+from src.models.users import fetch_users
+# from src.models.models import User
 
 app = Flask(__name__)
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
-
-from models import User
-
-'''
-very minor comment just to verify I can push to github and heroku :) 
-
-'''
 
 
 @app.route('/')
@@ -41,10 +38,12 @@ def index():
                            matched_users=matched_users,
                            unmatched_users=unmatched_users)
 
+
 @app.route('/coffee')
 def coffee():
     return render_template('profile.html')
     # return "Welcome to the Coffee Matchmaker!"
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     app.run(debug=True)
