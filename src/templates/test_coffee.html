@@ -1,8 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+
+
 <h1>Hello RC!</h1>
 <p>I'm in a template :)</p>
 
 <h3>Total users: {{ users|length }}</h3>
-<h3>Matched users: {{ matched_users|length }}</h3>
+<h3>Matched users: {{ matched_users|length * 2 }}</h3>
 <h3>Unmatched users: {{ unmatched_users|length }}</h3>
 
 <h2>Unmatched users</h2>
@@ -18,3 +25,6 @@
     <li><p>{{ pair[0].name}} -- {{ pair[1].name }}</p></li>
 {% endfor %}
 </ul>
+
+
+{% endblock %}
