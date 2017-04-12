@@ -14,10 +14,15 @@ from src.models.users import fetch_users
 # from src.models.models import User
 
 app = Flask(__name__)
+
+# APP_SETTINGS picked up from autoenv and .env file
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+
+# Sanity Checker for env variables
+print( 'Environment configuratino is: {}'.format( os.environ['APP_SETTINGS']) )
 
 @app.route('/')
 def index():
