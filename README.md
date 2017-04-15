@@ -1,29 +1,7 @@
-# rc-matchmaker
-A simple tool to pair RCers IRL.
+# RC-Matchmaker 
 
-# TODOs
-[x] Set up Flask scaffolding
-[x] Algorithm
-NEXT: Flask by example part 1 - Local Settings. autoenv is not loading our APP_STTINGS variable locally.
-[ ] Set up database: no repeat matches
-[ ] Set up hosting
-    [ ] Push to the interwebs
-    [ ] Set up RC domain
-
-
-[- ] User authentication with RC - currently active only
-
-[ ] Front-end user interface: opt-in/out, list history
-    [ -] Review RC user auth API. Where to put opt-in: settings or web page, etc
-    [ ] Goal: create static page for presentation
+## (In progress) - Web app to efficiently match Recursers with pairing partners
 
 
 
-
-[ ] Zulip bot:
-    [ ] Create bot
-    [ ] Notify users
-    [ ] Initiate private message
-[ ] Enable cronjob: disable on certain days (holidays, weekends, etc)
-[ ] Handle batch transitions: alums out, new batch in
-[ ] Set up testing
+At the Recurse Center pair programming is encouraged as a way to learn from others and grow as a programmer. Unfortunately, the most common regret that recursers have after completing their batch is that they didn't pair as much as they would have liked. This app is designed to help people who are willing to pair find each other, and to decrease some of the social bariers to pairing.
