@@ -4,7 +4,6 @@
 {% block content %}
 
 
-
 <h1>Hello RC!</h1>
 <p>I'm in a template :)</p>
 
@@ -14,16 +13,16 @@
 
 <h2>Unmatched users</h2>
 <ul>
-{% for user in unmatched_users %}
+    {% for user in unmatched_users %}
     <li><p>{{ user.name}}</p></li>
-{% endfor %}
+    {% endfor %}
 </ul>
 
 <h2>Matched users</h2>
 <ul>
-{% for pair in matched_users %}
+    {% for pair in matched_users %}
     <li><p>{{ pair[0].name}} -- {{ pair[1].name }}</p></li>
-{% endfor %}
+    {% endfor %}
 </ul>
 
 

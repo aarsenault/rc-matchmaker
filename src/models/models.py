@@ -1,6 +1,13 @@
-from src.app import db
+
+#  This is the database connection
+# from app import db
+
+from flask_sqlalchemy import SQLAlchemy
+
+db = SQLAlchemy()
 
 
+# Create the user table
 class User(db.Model):
     __tablename__ = 'users'
 
@@ -12,3 +19,9 @@ class User(db.Model):
 
     def __repr__(self):
         return '<User {}>'.format(self.name)
+
+
+# Create the table for histories
+
+
+

@@ -6,11 +6,13 @@ import os
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 
+from models.models import db
+
 # import matching
 # from users import fetch_users
 # from models import User
-from src.models import matching
-from src.models.users import fetch_users
+from models import matching
+from models.users import fetch_users
 # from src.models.models import User
 
 app = Flask(__name__)
@@ -18,14 +20,19 @@ app = Flask(__name__)
 # APP_SETTINGS picked up from autoenv and .env file
 app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
 
 
 # Sanity Checker for env variables
 print( 'Environment configuratino is: {}'.format( os.environ['APP_SETTINGS']) )
 
+
 @app.route('/')
 def index():
+    return  render_template('home.html')
+
+
+@app.route('/matches')
+def show_matches():
     # TODO: redirect to /coffee
 
     # Backend: Create list of "users"
@@ -44,8 +51,8 @@ def index():
                            unmatched_users=unmatched_users)
 
 
-@app.route('/coffee')
-def coffee():
+@app.route('/profile')
+def show_profile():
     return render_template('profile.html')
     # return "Welcome to the Coffee Matchmaker!"
 
