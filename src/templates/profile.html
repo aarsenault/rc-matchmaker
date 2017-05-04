@@ -4,45 +4,26 @@
 {% block content %}
 
 
-<h1>Matchmaker, matchmaker</h1>
+<h1> RC Matchmaker </h1>
 
-<p> {% if login %}
-    | Welcome, {{ login.user }}
+<H2> {% if login %}
+     Welcome, {{ login.user }}
     {% if login.image %}
     <img src="{{ login.image }}" class="icon"/>
     {% endif %}
     {% endif %}
-</p>
+</H2>
 
-<div class="checkbox">
-    <label>
-        <input type="checkbox" name="opt-in"> Introduce me to someone new tomorrow!
-    </label>
-    <p>And every tomorrow* after that.<br>*Weekdays only, until the end of my batch or until I opt out.</p>
+<div class="funkyradio-success">
+    <input type="radio" name="radio" id="radio3"/>
+    <label for="radio3"> Match me Once Per week </label>
+</div>
+<div class="funkyradio-danger">
+    <input type="radio" name="radio" id="radio4"/>
+    <label for="radio4"> No Matches </label>
 </div>
 
-<h3>Today's match: <strong>Mikhail Kalashnikov</strong></h3>
-<p>CoffeeBot has introduced you on Zulip. Go find a time to meet IRL!</p>
-<!-- OR: No match today :( -->
-<blockquote>
-    <p>Inspirational quote</p>
-</blockquote>
 
-<h5>Previous matches</h5>
-<ul>
-    <li>
-        <p>Yesterday - Mike Gerson</p>
-    </li>
-    <li>
-        <p>2 days ago - Alberto Torres</p>
-    </li>
-    <li>
-        <p>Monday - Alex Berke</p>
-    </li>
-    <li>
-        <p>Fri 3/24 - AJ Jordan</p>
-    </li>
-</ul>
 
 
 {% endblock %}
