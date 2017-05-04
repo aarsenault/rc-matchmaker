@@ -48,8 +48,8 @@ rc_auth = oauth.remote_app(
     base_url='https://www.recurse.com/api/v1/',
     access_token_url='https://www.recurse.com/oauth/token',
     authorize_url='https://www.recurse.com/oauth/authorize',
-    consumer_key= 'c412064aa2fac22c3ae4a12157a935dc3ece3476387160cf5a41612055c85e8e',
-    consumer_secret= '5b2603dc1971e895efe5d1e45a2cf3bd044a24197000540d3bf91ce5ab83ecd9',
+    consumer_key= 'f1e02c84e292da0bd2b6bd19236f2c69a4a4a69b22e7090137eafdf4ae3d64cf',
+    consumer_secret= 'be343ce5215def7540904861dce573d9bc52b3b00b10c9d39223cd50d9d072f1',
     access_token_method='POST')
 
 
@@ -91,8 +91,8 @@ def login():
         return rc_auth.authorize(callback=landing)
 
 
-@app.route('/test')
-# @app.route('/oauth_authorized')
+# @app.route('/test')
+@app.route('/oauth_authorized')
 @rc_auth.authorized_handler
 def oauth_authorized(resp):
     print('View: oauth_authorized')
