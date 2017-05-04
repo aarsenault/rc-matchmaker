@@ -8,5 +8,8 @@ SQLAlchemy==1.1.7
 Flask-Migrate==2.0.3
 psycopg2==2.7.1
 
+# OAuth
+Flask-OAuthlib==0.9.3
+
 # Heroku
 gunicorn==19.7.1
