@@ -118,7 +118,7 @@ def oauth_authorized(resp):
         session['login']['user'] = 'Hacker Schooler'
     flash('You are logged in.')
     print(me.data)
-    return redirect(request.args.get('next') or url_for('index'))
+    return redirect(request.args.get('next') or url_for('show_profile'))
 
 
 @app.route('/logout')
@@ -163,4 +163,6 @@ def show_profile(login=None):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True )
+
+# host='0.0.0.0'
