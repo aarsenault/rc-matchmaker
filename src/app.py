@@ -32,24 +32,12 @@ print('RC_SECRET', os.environ.get('RC_SECRET', ''))
 oauth = OAuth(app)
 rc_auth = oauth.remote_app(
 
-    # for local
-
-    # 'recurse_center',
-    # base_url='https://www.recurse.com/api/v1/',
-    # access_token_url='https://www.recurse.com/oauth/token',
-    # authorize_url='https://www.recurse.com/oauth/authorize',
-    # consumer_key=os.environ.get('RC_CLIENT_ID', None),
-    # consumer_secret=os.environ.get('RC_SECRET', None),
-    # access_token_method='POST')rc_auth = oauth.remote_app(
-
-    # for online dev
-
     'recurse_center',
     base_url='https://www.recurse.com/api/v1/',
     access_token_url='https://www.recurse.com/oauth/token',
     authorize_url='https://www.recurse.com/oauth/authorize',
-    consumer_key= 'f1e02c84e292da0bd2b6bd19236f2c69a4a4a69b22e7090137eafdf4ae3d64cf',
-    consumer_secret= 'be343ce5215def7540904861dce573d9bc52b3b00b10c9d39223cd50d9d072f1',
+    consumer_key=os.environ.get('RC_CLIENT_ID'),
+    consumer_secret=os.environ.get('RC_SECRET'),
     access_token_method='POST')
 
 
